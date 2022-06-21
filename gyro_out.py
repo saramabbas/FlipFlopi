@@ -35,7 +35,7 @@ GYRO_XOUT_H  = 0x43
 GYRO_YOUT_H  = 0x45
 GYRO_ZOUT_H  = 0x47
 average_samples=15
-t_loop = 10 #in seconds
+t_loop = 5 #in seconds
 n_m = int(t_loop / 0.01) #number of measurements taken
 
 #declaring all arrays for storing global data
