@@ -35,6 +35,8 @@ GYRO_XOUT_H  = 0x43
 GYRO_YOUT_H  = 0x45
 GYRO_ZOUT_H  = 0x47
 average_samples=15
+t_loop = 10 #in seconds
+n_m = int(t_loop / 0.01) #number of measurements taken
 
 #declaring all arrays for storing global data
 average_timing_array = np.array([])
@@ -90,7 +92,7 @@ MPU_Init()
 #start timing
 start = time.clock()
 
-while(1):
+for w in range (n_m): #Inclinometer Data-Reading Loop:
  average_array = np.zeros((2,average_samples))
  time = np.zeros((1,average_samples))
 
