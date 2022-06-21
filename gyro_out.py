@@ -136,26 +136,26 @@ for w in range (n_m): #Inclinometer Data-Reading Loop:
  # write a row to the csv file
  #writer.writerow(round(average[0]), round(average[1]))
 
-writer.writerow(average_roll_pitch)
+writer.writerows(zip(average_timing_array,average_roll_pitch))
 
-# x axis values
-x = average_timing_array
-# corresponding y axis values
-y = average_roll_pitch[1]
+# # x axis values
+# x = average_timing_array
+# # corresponding y axis values
+# y = average_roll_pitch[1]
   
-# plotting the points 
-plt.plot(x, y)
+# # plotting the points 
+# plt.plot(x, y)
   
-# naming the x axis
-plt.xlabel('time')
-# naming the y axis
-plt.ylabel('roll')
+# # naming the x axis
+# plt.xlabel('time')
+# # naming the y axis
+# plt.ylabel('roll')
   
-# giving a title to my graph
-plt.title('Average Roll over time')
+# # giving a title to my graph
+# plt.title('Average Roll over time')
   
-# function to show the plot
-plt.show()
+# # function to show the plot
+# plt.show()
 
 
 # close the file
