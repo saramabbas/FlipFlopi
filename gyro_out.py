@@ -114,7 +114,7 @@ for w in range (n_m): #Inclinometer Data-Reading Loop:
      pitch = math.atan2(-accX,accZ) * radToDeg
      #print(pitch,roll)
   
-  time_array[i] = (time.clock()) #get time
+  time_array[0][i] = (time.clock()) #get time
   average_array[0][i] = pitch #0th element is pitch
   average_array[1][i] = roll #1st element is roll
 
