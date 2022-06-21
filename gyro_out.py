@@ -43,7 +43,7 @@ f = open('2022_gyro_rolltest.csv', 'a')
 # create the csv writer
 writer = csv.writer(f)
 
-writer.writerow("test started")
+writer.writerow('test started')
 #Read the gyro and acceleromater values from MPU6050
 def MPU_Init():
     #write to sample rate register
