@@ -108,8 +108,8 @@ while(1):
   average_array[1][i] = roll
     
  average = np.mean(average_array, axis=1)
- average = round ((average[0], average[1]), 2)
-
+ average[0] = round (average[0],2) 
+ average [1] = round(average[1], 2)
 
  print (average[0], average[1])
  
