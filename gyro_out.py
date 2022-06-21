@@ -128,6 +128,8 @@ for w in range (n_m): #Inclinometer Data-Reading Loop:
 
  average_time = np.mean(time_array, axis=1)
  average_timing_array = np.append(average_timing_array, average_time)
+ average_timing_array [0]= round (average_timing_array [0],4) 
+ 
  print (average_time[0], average_roll_pitch[0], average_roll_pitch[1])
  
 
