@@ -107,15 +107,15 @@ while(1):
   average_array[0][i] = pitch
   average_array[1][i] = roll
     
- average = np.mean(average_array, axis=1)
+ average = round(np.mean(average_array, axis=1),2)
 
 
- print (round(average[0],2), round(average[1],2))
+ print (average[0],2, average[1],2)
  
 
  # write a row to the csv file
  #writer.writerow(round(average[0]), round(average[1]))
- writer.writerow(average)
+#  writer.writerow(average)
 
 # close the file
 f.close()
