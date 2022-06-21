@@ -94,7 +94,7 @@ start = time.clock()
 
 for w in range (n_m): #Inclinometer Data-Reading Loop:
  average_array = np.zeros((2,average_samples))
- time = np.zeros((1,average_samples))
+ time_array = np.zeros((1,average_samples))
 
  for i in range(average_samples):
   time.sleep(0)
@@ -114,7 +114,7 @@ for w in range (n_m): #Inclinometer Data-Reading Loop:
      pitch = math.atan2(-accX,accZ) * radToDeg
      #print(pitch,roll)
   
-  time[i] = (time.clock()) #get time
+  time_array[i] = (time.clock()) #get time
   average_array[0][i] = pitch #0th element is pitch
   average_array[1][i] = roll #1st element is roll
 
@@ -126,7 +126,7 @@ for w in range (n_m): #Inclinometer Data-Reading Loop:
  average_roll_pitch [1] = round(average_roll_pitch[1], 2)
  
 
- average_time = np.mean(time, axis=1)
+ average_time = np.mean(time_array, axis=1)
  average_timing_array.append(average_time)
  print (average_time, average_roll_pitch[0], average_roll_pitch[1])
  
